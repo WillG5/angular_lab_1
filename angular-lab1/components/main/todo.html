@@ -1,0 +1,10 @@
+<input class="filter" type="text" placeholder="filter your to-dos" ng-model="$ctrl.text"/> 
+
+<ol>
+    <li ng-repeat="task in $ctrl.tasks" ng-class="{strike: task.complete === false}"><button class="complete" ng-click="$ctrl.complete" ng-if="task.complete === true">Completed</button>{{task.todo}}<button class="deleting" ng-click="$ctrl.delete($index)">X</button></li>
+</ol>
+
+<input class="add" type="text" placeholder="add me" ng-model="$ctrl.list"/>
+
+<button class="adding" ng-click="$ctrl.add()">Add</button>
+
